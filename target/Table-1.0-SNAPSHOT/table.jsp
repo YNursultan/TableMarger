@@ -10,7 +10,7 @@
     padding: 2px;
   }
   td{
-    border: slategray 3px solid;
+    border: slategray 1px solid;
     vertical-align: top;
     background: #f8f8f8;
     padding: 2px;
@@ -30,7 +30,6 @@
     padding-top: 2px;
     color: white;
     width: 20px;
-    padding: 0;
   }
   .lecture{
     color: crimson;
@@ -40,6 +39,21 @@
   }
   .laboratory{
     color: darkseagreen;
+  }
+  .lecture_right{
+    color: crimson;
+    border-right: slategray 3px solid;
+  }
+  .practice_right{
+    color: darkslateblue;
+    border-right: slategray 3px solid;
+  }
+  .laboratory_right{
+    color: darkseagreen;
+    border-right: slategray 3px solid;
+  }
+  .right{
+    border-right: slategray 3px solid;
   }
   .time{
     background: darkseagreen;
@@ -103,13 +117,29 @@
       for (int n = 0; n < Monday.size(); n++){
         if (Monday.get(n).contains(timeName.get(i))){
           if (Monday.get(n).contains("online lecture")){
-            out.println("<td class = "+ "\"lecture\"" +">");
+            if (j == timeMax.get(i) - 1){
+              out.println("<td class = "+ "\"lecture_right\"" +">");
+            }else {
+              out.println("<td class = "+ "\"lecture\"" +">");
+            }
           }else if (Monday.get(n).contains("online practice")){
-            out.println("<td class = "+ "\"practice\"" +">");
+            if (j == timeMax.get(i) - 1){
+              out.println("<td class = "+ "\"practice_right\"" +">");
+            }else {
+              out.println("<td class = "+ "\"practice\"" +">");
+            }
           }else if (Monday.get(n).contains("laboratory")){
-            out.println("<td class = "+ "\"laboratory\"" +">");
+            if (j == timeMax.get(i) - 1){
+              out.println("<td class = "+ "\"laboratory_right\"" +">");
+            }else {
+              out.println("<td class = "+ "\"laboratory\"" +">");
+            }
           }else{
-            out.println("<td style="+ "\"width:250px\"" +">");
+            if (j == timeMax.get(i) - 1){
+              out.println("<td class = "+ "\"right\"" +">");
+            }else {
+              out.println("<td style="+ "\"width:250px\"" +">");
+            }
           }
           out.println(Monday.get(n).substring(12));
           out.println("</td>");
@@ -120,7 +150,11 @@
       }
       if (j == m){
         for (int t = 0; t < timeMax.get(i) - m; t++){
-          out.println("<td style="+ "\"width:250px\"" +">");
+          if (t == timeMax.get(i) - m - 1){
+            out.println("<td class = "+ "\"right\"" +">");
+          }else {
+            out.println("<td style="+ "\"width:250px\"" +">");
+          }
           out.println("");
           out.println("</td>");
         }
@@ -140,13 +174,29 @@
       for (int n = 0; n < Tuesday.size(); n++){
         if (Tuesday.get(n).contains(timeName.get(i))){
           if (Tuesday.get(n).contains("online lecture")){
-            out.println("<td class = "+ "\"lecture\"" +">");
+            if (j == timeMax.get(i) - 1){
+              out.println("<td class = "+ "\"lecture_right\"" +">");
+            }else {
+              out.println("<td class = "+ "\"lecture\"" +">");
+            }
           }else if (Tuesday.get(n).contains("online practice")){
-            out.println("<td class = "+ "\"practice\"" +">");
+            if (j == timeMax.get(i) - 1){
+              out.println("<td class = "+ "\"practice_right\"" +">");
+            }else {
+              out.println("<td class = "+ "\"practice\"" +">");
+            }
           }else if (Tuesday.get(n).contains("laboratory")){
-            out.println("<td class = "+ "\"laboratory\"" +">");
+            if (j == timeMax.get(i) - 1){
+              out.println("<td class = "+ "\"laboratory_right\"" +">");
+            }else {
+              out.println("<td class = "+ "\"laboratory\"" +">");
+            }
           }else{
-            out.println("<td style="+ "\"width:250px\"" +">");
+            if (j == timeMax.get(i) - 1){
+              out.println("<td class = "+ "\"right\"" +">");
+            }else {
+              out.println("<td style="+ "\"width:250px\"" +">");
+            }
           }
           out.println(Tuesday.get(n).substring(12));
           out.println("</td>");
@@ -157,7 +207,11 @@
       }
       if (j == m){
         for (int t = 0; t < timeMax.get(i) - m; t++){
-          out.println("<td style="+ "\"width:250px\"" +">");
+          if (t == timeMax.get(i) - m - 1){
+            out.println("<td class = "+ "\"right\"" +">");
+          }else {
+            out.println("<td style="+ "\"width:250px\"" +">");
+          }
           out.println("");
           out.println("</td>");
         }
@@ -177,13 +231,29 @@
       for (int n = 0; n < Wednesday.size(); n++){
         if (Wednesday.get(n).contains(timeName.get(i))){
           if (Wednesday.get(n).contains("online lecture")){
-            out.println("<td class = "+ "\"lecture\"" +">");
+            if (j == timeMax.get(i) - 1){
+              out.println("<td class = "+ "\"lecture_right\"" +">");
+            }else {
+              out.println("<td class = "+ "\"lecture\"" +">");
+            }
           }else if (Wednesday.get(n).contains("online practice")){
-            out.println("<td class = "+ "\"practice\"" +">");
+            if (j == timeMax.get(i) - 1){
+              out.println("<td class = "+ "\"practice_right\"" +">");
+            }else {
+              out.println("<td class = "+ "\"practice\"" +">");
+            }
           }else if (Wednesday.get(n).contains("laboratory")){
-            out.println("<td class = "+ "\"laboratory\"" +">");
+            if (j == timeMax.get(i) - 1){
+              out.println("<td class = "+ "\"laboratory_right\"" +">");
+            }else {
+              out.println("<td class = "+ "\"laboratory\"" +">");
+            }
           }else{
-            out.println("<td style="+ "\"width:250px\"" +">");
+            if (j == timeMax.get(i) - 1){
+              out.println("<td class = "+ "\"right\"" +">");
+            }else {
+              out.println("<td style="+ "\"width:250px\"" +">");
+            }
           }
           out.println(Wednesday.get(n).substring(12));
           out.println("</td>");
@@ -194,7 +264,11 @@
       }
       if (j == m){
         for (int t = 0; t < timeMax.get(i) - m; t++){
-          out.println("<td style="+ "\"width:250px\"" +">");
+          if (t == timeMax.get(i) - m - 1){
+            out.println("<td class = "+ "\"right\"" +">");
+          }else {
+            out.println("<td style="+ "\"width:250px\"" +">");
+          }
           out.println("");
           out.println("</td>");
         }
@@ -214,13 +288,29 @@
       for (int n = 0; n < Thursday.size(); n++){
         if (Thursday.get(n).contains(timeName.get(i))){
           if (Thursday.get(n).contains("online lecture")){
-            out.println("<td class = "+ "\"lecture\"" +">");
+            if (j == timeMax.get(i) - 1){
+              out.println("<td class = "+ "\"lecture_right\"" +">");
+            }else {
+              out.println("<td class = "+ "\"lecture\"" +">");
+            }
           }else if (Thursday.get(n).contains("online practice")){
-            out.println("<td class = "+ "\"practice\"" +">");
+            if (j == timeMax.get(i) - 1){
+              out.println("<td class = "+ "\"practice_right\"" +">");
+            }else {
+              out.println("<td class = "+ "\"practice\"" +">");
+            }
           }else if (Thursday.get(n).contains("laboratory")){
-            out.println("<td class = "+ "\"laboratory\"" +">");
+            if (j == timeMax.get(i) - 1){
+              out.println("<td class = "+ "\"laboratory_right\"" +">");
+            }else {
+              out.println("<td class = "+ "\"laboratory\"" +">");
+            }
           }else{
-            out.println("<td style="+ "\"width:250px\"" +">");
+            if (j == timeMax.get(i) - 1){
+              out.println("<td class = "+ "\"right\"" +">");
+            }else {
+              out.println("<td style="+ "\"width:250px\"" +">");
+            }
           }
           out.println(Thursday.get(n).substring(12));
           out.println("</td>");
@@ -231,7 +321,11 @@
       }
       if (j == m){
         for (int t = 0; t < timeMax.get(i) - m; t++){
-          out.println("<td style="+ "\"width:250px\"" +">");
+          if (t == timeMax.get(i) - m - 1){
+            out.println("<td class = "+ "\"right\"" +">");
+          }else {
+            out.println("<td style="+ "\"width:250px\"" +">");
+          }
           out.println("");
           out.println("</td>");
         }
@@ -251,13 +345,29 @@
       for (int n = 0; n < Friday.size(); n++){
         if (Friday.get(n).contains(timeName.get(i))){
           if (Friday.get(n).contains("online lecture")){
-            out.println("<td class = "+ "\"lecture\"" +">");
+            if (j == timeMax.get(i) - 1){
+              out.println("<td class = "+ "\"lecture_right\"" +">");
+            }else {
+              out.println("<td class = "+ "\"lecture\"" +">");
+            }
           }else if (Friday.get(n).contains("online practice")){
-            out.println("<td class = "+ "\"practice\"" +">");
+            if (j == timeMax.get(i) - 1){
+              out.println("<td class = "+ "\"practice_right\"" +">");
+            }else {
+              out.println("<td class = "+ "\"practice\"" +">");
+            }
           }else if (Friday.get(n).contains("laboratory")){
-            out.println("<td class = "+ "\"laboratory\"" +">");
+            if (j == timeMax.get(i) - 1){
+              out.println("<td class = "+ "\"laboratory_right\"" +">");
+            }else {
+              out.println("<td class = "+ "\"laboratory\"" +">");
+            }
           }else{
-            out.println("<td style="+ "\"width:250px\"" +">");
+            if (j == timeMax.get(i) - 1){
+              out.println("<td class = "+ "\"right\"" +">");
+            }else {
+              out.println("<td style="+ "\"width:250px\"" +">");
+            }
           }
           out.println(Friday.get(n).substring(12));
           out.println("</td>");
@@ -268,7 +378,11 @@
       }
       if (j == m){
         for (int t = 0; t < timeMax.get(i) - m; t++){
-          out.println("<td style="+ "\"width:250px\"" +">");
+          if (t == timeMax.get(i) - m - 1){
+            out.println("<td class = "+ "\"right\"" +">");
+          }else {
+            out.println("<td style="+ "\"width:250px\"" +">");
+          }
           out.println("");
           out.println("</td>");
         }
@@ -288,13 +402,29 @@
       for (int n = 0; n < Saturday.size(); n++){
         if (Saturday.get(n).contains(timeName.get(i))){
           if (Saturday.get(n).contains("online lecture")){
-            out.println("<td class = "+ "\"lecture\"" +">");
+            if (j == timeMax.get(i) - 1){
+              out.println("<td class = "+ "\"lecture_right\"" +">");
+            }else {
+              out.println("<td class = "+ "\"lecture\"" +">");
+            }
           }else if (Saturday.get(n).contains("online practice")){
-            out.println("<td class = "+ "\"practice\"" +">");
+            if (j == timeMax.get(i) - 1){
+              out.println("<td class = "+ "\"practice_right\"" +">");
+            }else {
+              out.println("<td class = "+ "\"practice\"" +">");
+            }
           }else if (Saturday.get(n).contains("laboratory")){
-            out.println("<td class = "+ "\"laboratory\"" +">");
+            if (j == timeMax.get(i) - 1){
+              out.println("<td class = "+ "\"laboratory_right\"" +">");
+            }else {
+              out.println("<td class = "+ "\"laboratory\"" +">");
+            }
           }else{
-            out.println("<td style="+ "\"width:250px\"" +">");
+            if (j == timeMax.get(i) - 1){
+              out.println("<td class = "+ "\"right\"" +">");
+            }else {
+              out.println("<td style="+ "\"width:250px\"" +">");
+            }
           }
           out.println(Saturday.get(n).substring(12));
           out.println("</td>");
@@ -305,7 +435,11 @@
       }
       if (j == m){
         for (int t = 0; t < timeMax.get(i) - m; t++){
-          out.println("<td style="+ "\"width:250px\"" +">");
+          if (t == timeMax.get(i) - m - 1){
+            out.println("<td class = "+ "\"right\"" +">");
+          }else {
+            out.println("<td style="+ "\"width:250px\"" +">");
+          }
           out.println("");
           out.println("</td>");
         }
@@ -314,6 +448,27 @@
     }
   }
   out.println("</tr>");
+  // The row of time
+  out.println("<tr>");
+  out.println("<th>");
+  out.println("");
+  out.println("</th>");
+  for (int i = 0; i < timeMax.size(); i++){
+    if (clas == 0){
+      out.println("<th colspan="+'"'+timeMax.get(i)+'"'+" class =  " + "\"time\"" +">");
+      clas = 1;
+      out.println(timeName.get(i));
+      out.println("</th>");
+      continue;
+    }
+    if (clas == 1){
+      out.println("<th colspan="+'"'+timeMax.get(i)+'"'+" class = " + "\"time1\"" +  ">");
+      clas = 0;
+      out.println(timeName.get(i));
+      out.println("</th>");
+      continue;
+    }
+  }
   out.println("</table>");
 %>
 
