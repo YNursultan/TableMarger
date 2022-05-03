@@ -7,8 +7,6 @@
 --%>
 <style>
   th{
-    background: #324960;
-    color: white;
     padding: 2px;
   }
   td{
@@ -43,6 +41,14 @@
   .laboratory{
     color: darkseagreen;
   }
+  .time{
+    background: darkseagreen;
+    color: black;
+  }
+  .time1{
+    background: #324960;
+    color: white;
+  }
 </style>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
@@ -70,10 +76,19 @@
   out.println("");
   out.println("</th>");
   for (int i = 0; i < timeMax.size(); i++){
-    for (int j = 0; j < timeMax.get(i); j++){
-      out.println("<th style="+ "\"width:250px\"" +">");
+    if (clas == 0){
+      out.println("<th colspan="+'"'+timeMax.get(i)+'"'+" class =  " + "\"time\"" +">");
+      clas = 1;
       out.println(timeName.get(i));
       out.println("</th>");
+      continue;
+    }
+    if (clas == 1){
+      out.println("<th colspan="+'"'+timeMax.get(i)+'"'+" class = " + "\"time1\"" +  ">");
+      clas = 0;
+      out.println(timeName.get(i));
+      out.println("</th>");
+      continue;
     }
   }
   out.println("</tr>");
