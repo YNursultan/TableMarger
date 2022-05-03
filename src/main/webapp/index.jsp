@@ -1,5 +1,15 @@
 <%@ page contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
 <!DOCTYPE html>
+<style>
+    form{
+        text-align: center;
+        vertical-align: center;
+        margin-top: 300px;
+    }
+    input{
+        padding: 10px;
+    }
+</style>
 <html>
 <head>
     <title>Schedule</title>
@@ -15,7 +25,7 @@
 <form method="get" action="Servlet" enctype="multipart/form-data">
     <label for="file">Choose file to upload</label>
     <input type="file" id="file" name="file" multiple />
-    <br>
+    <br><br>
     <input type="submit" value="Submit" name="select"/>
 </form>
 </body>

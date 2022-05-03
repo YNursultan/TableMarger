@@ -302,20 +302,20 @@
   out.println("</table>");
 %>
 
-  <form method="post" action="Servlet">
-    Choose Day: <select name="week" >
-      <option value="Monday">Monday</option>
-      <option value="Tuesday">Tuesday</option>
-      <option value="Wednesday">Wednesday</option>
-      <option value="Thursday">Thursday</option>
-      <option value="Friday">Friday</option>
-      <option value="Saturday">Saturday</option>
-    </select><br>
-    Time: <input type="text" name="time" /><br>
-    Teacher: <input type="text" name="teacher"/><br>
-    Room: <input type="text" name="room"/><br>
-    <input type="submit" value="Add" name="Add">
-  </form>
+<%--  <form method="post" action="Servlet">--%>
+<%--    Choose Day: <select name="week" >--%>
+<%--      <option value="Monday">Monday</option>--%>
+<%--      <option value="Tuesday">Tuesday</option>--%>
+<%--      <option value="Wednesday">Wednesday</option>--%>
+<%--      <option value="Thursday">Thursday</option>--%>
+<%--      <option value="Friday">Friday</option>--%>
+<%--      <option value="Saturday">Saturday</option>--%>
+<%--    </select><br>--%>
+<%--    Time: <input type="text" name="time" /><br>--%>
+<%--    Teacher: <input type="text" name="teacher"/><br>--%>
+<%--    Room: <input type="text" name="room"/><br>--%>
+<%--    <input type="submit" value="Add" name="Add">--%>
+<%--  </form>--%>
 
   </body>
 </html>
