@@ -10,7 +10,7 @@
     padding: 2px;
   }
   td{
-    border: slategray 1px solid;
+    border: slategray 3px solid;
     vertical-align: top;
     background: #f8f8f8;
     padding: 2px;

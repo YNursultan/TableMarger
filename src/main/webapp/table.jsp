@@ -10,7 +10,7 @@
     padding: 2px;
   }
   td{
-    border: slategray 1px solid;
+    border: slategray 3px solid;
     vertical-align: top;
     background: #f8f8f8;
     padding: 2px;
@@ -30,7 +30,6 @@
     padding-top: 2px;
     color: white;
     width: 20px;
-    padding: 0;
   }
   .lecture{
     color: crimson;
